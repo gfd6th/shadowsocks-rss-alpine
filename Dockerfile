@@ -20,7 +20,7 @@ RUN sed -i  's/\("password": "\).*/\1'"$SSR_PASSWORD"'",/g' /root/shadowsocksr/c
 RUN sed -i  's/\("method": "\).*/\1'"$SSR_METHOD"'",/g' /root/shadowsocksr/config.json
 RUN sed -i  's/\("protocol": "\).*/\1'"$SSR_PROTOCOL"'",/g' /root/shadowsocksr/config.json
 RUN sed -i  's/\("obfs": "\).*/\1'"$SSR_OBFS"'",/g' /root/shadowsocksr/config.json
-RUN sed -i  's/\("fast_open": \).*/\1'"$FAST_OPEN"',/g' /root/shadowsocksr/config.json
+RUN sed -i  's/\("fast_open": \).*/\1'"$FAST_OPEN"'/g' /root/shadowsocksr/config.json
 
 EXPOSE $SSR_SERVER_PORT
 
